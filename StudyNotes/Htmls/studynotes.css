@@ -1,0 +1,23 @@
+.code{
+background-color: lightgray;
+border-style:outset;
+border-width:2px;
+-webkit-border-radius:8px;
+padding:5px;
+
+-webkit-box-shadow:3px 3px 8px #ccc;
+font-size:12px;
+}
+
+body{
+
+text-shadow:1px 1px 3px #ccc;
+
+
+
+}
+
+.url{
+	font-style:italic;
+	
+}

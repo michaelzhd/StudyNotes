@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width;
+		    initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>	
+<link rel="stylesheet" type="text/css" href="../studynotes.css">
+<script type="text/javascript" src="../PythonKeywords.js"></script>
+
+
+</head>
+
+<body onload ="keywordsBrush()">
+
+
+<pre class='code'>
+<font color=green># Regular expression module methods</font>
+>>> import re
+>>> str1=<font color=green>'I need your testimony'</font>
+<font color=green>#re.search returns the first matched result or None if no match.</font>
+>>> s=re.search(<font color=green>r'te(sti)m'</font>,str1)
+>>> if s:
+	print s.group(0),<font color=green>','</font>,s.group(1)
+else:
+	print <font color=green>'No result'</font>
+
+	
+<font color=blue>testim , sti</font>
+<font color=green>#match only test first word of the string</font>
+>>> m=re.match(<font color=green>r'I'</font>,str1)
+>>> if m:
+	print m.group(0)
+else:
+	print <font color=green>'No match'</font>
+	
+<font color=blue>I</font>
+>>> m1=re.match(<font color=green>r'need'</font>,str1)
+>>> if m1:
+	print m1.group(0)
+else:
+	print <font color=green>'No match'</font>
+	
+<font color=blue>No match</font>
+>>> str2=<font color=green>'&lt;user01@py.com&gt;&lt;user02@yp.com&gt;&lt;user03@pp.edu&gt;'</font>
+>>> re.findall(<font color=green>r'(\w+@[a-z]{2}\.[a-z]{3})'</font>,str2)
+<font color=blue>['user01@py.com', 'user02@yp.com', 'ruse03@pp.edu']</font>
+>>> re.sub(<font color=green>r'user'</font>,<font color=green>'test'</font>,str2)
+<font color=blue>'&lt;test01@py.com&gt;&lt;test02@yp.com&gt;&lt;test03@pp.edu&gt;'</font>
+<font color=green>#parameter 'count' define how many replacing to perform
+#default 0,which mean no limit</font>
+>>> re.sub(<font color=green>r'test'</font>,<font color=green>'user'</font>,str2,count=2)
+<font color=blue>'&lt;user01@py.com&gt;&lt;user02@yp.com&gt;&lt;test03@pp.edu&gt;'</font>
+>>> str3='Hello, Nice to meet you'
+>>> re.split(<font color=green>r'\s'</font>,str3)
+<font color=blue>['Hello,', 'Nice', 'to', 'meet', 'you']</font>
+>>> str3
+<font color=blue>'Hello, Nice to meet you'</font>
+<font color=green>#compilation could make matching faster</font>
+>>> c=re.compile(<font color=green>r'\w*e\w*'</font>)
+>>> c.findall(str3)
+<font color=blue>['Hello', 'Nice', 'meet']</font>
+>>> c.sub(lambda m:<font color=green>'&lt;'</font>+m.group(0)+<font color=green>'&gt;'</font>,str3)
+<font color=blue>'&lt;Hello&gt;, &lt;Nice&gt; to &lt;meet&gt; you'</font>
+
+<font color=green> </font>
+<font color=blue></font>
+</pre>
+</body>
+
+</html>

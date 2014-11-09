@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width;
+		    initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>	
+<link rel="stylesheet" type="text/css" href="../studynotes.css">
+<script type="text/javascript" src="../PythonKeywords.js"></script>	
+
+</head>
+
+<body onload ="keywordsBrush()">
+
+
+
+<font color=green>Three very useful functional
+programming tools are filter(),
+map() and reduce()
+filter(function,sequence) return a sequence with
+the items in the sequence that when test with
+the 'function' return 'true'
+</font>
+<pre class='code'>
+>>> def <font color=blue>func1</font>(x):return x%2!=0 and x%3!=0
+
+>>> <font color=purple>filter</font>(func1,<font color=purple>range</font>(20))
+<font color=blue>[1, 5, 7, 11, 13, 17, 19]</font>
+</pre>
+<font color=green>map(function,sequence) apply the 'function'
+to each element in the sequence and return 
+a new sequence consisting every result</font>
+<pre class='code'>
+>>> def <font color=blue>func2</font>(x):return x**2
+>>> <font color=purple>map</font>(func2,range(2,5))
+<font color=blue>[4, 9, 16]</font>
+>>> <font color=purple>map</font>(func2,[2,3,4,5])
+<font color=blue>[4, 9, 16, 25]</font>
+>>> def <font color=blue>func3</font>(x,y):return x+y
+
+>>> list1 =[1,2,3]
+>>> list2 =[100,200,300]
+</pre>
+<font color=green>the arguments number other than 'function'
+in map() must be the same as the argument
+number in the 'function'</font>
+<pre class='code'>
+>>><font color=purple> map</font>(func3,list1,list2)
+<font color=blue>[101, 202, 303]</font>
+</pre>
+<font color=green>reduce(function,sequence) apply the 'function'
+to first corresponding number of elements
+(2 in the example below) and take the result
+as one argument of the next run of 'function'
+until all elements are used </font>
+<pre class='code'>
+>>> <font color=purple>reduce</font>(func3,list1)
+<font color=blue>6</font>
+>>> <font color=purple>reduce</font>(func3,list2)
+<font color=blue>600</font>
+>>> 
+</pre>
+<font color=blue>
+<font color=purple>
+</font>
+</font>
+
+
+</body>
+
+</html>

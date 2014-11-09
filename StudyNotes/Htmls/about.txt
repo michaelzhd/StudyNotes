@@ -1,0 +1,17 @@
+Python StudyNotes
+
+Version: 1.0
+
+What this App is?
+
+-An App that allow you to learn and memorize Python piece by piece even when you are in bath room, subway, waiting for bus...
+
+-A pocket reference that you can take out your iPhone, have a peek and immediately know all details that are so hard to remember when you are developing Python programs.
+
+
+What this App is not?
+
+-Not an App that teaches you with super detailed small steps from scratch : you will need a book for that.
+
+-Not like an encyclopedia with every detail options that make you feel sleepy. The idea is to provide those frequently used knowledge.
+
