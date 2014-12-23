@@ -1,6 +1,6 @@
 //
 //  AboutViewController.m
-//  Python StudyNotes
+//  Data Structures And Algorithms In C
 //
 //  Created by Michael Dong on 12/30/13.
 //  Copyright (c) 2013 Michael Dong. All rights reserved.
@@ -50,7 +50,8 @@
 -(void)loadBackButton
 {
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [backButton setFrame:CGRectMake(120, 430, 80, 30)];
+    [backButton setFrame:CGRectMake(kDeviceWidth/2-40, kDeviceHeight-40, 80, 30)];
+
 
     [backButton setTitle:@"Back" forState:UIControlStateNormal];
     backButton.layer.borderColor = [UIColor blueColor].CGColor;
@@ -73,11 +74,11 @@
 -(void)loadTextView
 {
 
-    UITextView *aboutText =[[UITextView alloc]initWithFrame:CGRectMake(20, 50, 280, 350)];
+    UITextView *aboutText =[[UITextView alloc]initWithFrame:CGRectMake(20, 30, kDeviceWidth-50, kDeviceHeight-80)];
     aboutText.textColor =[UIColor blueColor];
     aboutText.editable  = NO;
-    aboutText.font =[UIFont fontWithName:@"Helvetica" size:10.0];
-    //aboutText.textAlignment =NSTextAlignmentCenter;
+    aboutText.font =[UIFont fontWithName:@"Helvetica" size:12.0];
+//    aboutText.textAlignment =NSTextAlignmentCenter;
     [aboutText resignFirstResponder];
    
     NSString *filePath =[[NSBundle mainBundle] pathForResource:@"about" ofType:@"txt" inDirectory:@"Htmls"];

@@ -1,6 +1,6 @@
 //
 //  MainViewController.m
-//  Python StudyNotes
+//  Data Structures And Algorithms In C
 //
 //  Created by Michael Dong on 12/27/13.
 //  Copyright (c) 2013 Michael Dong. All rights reserved.
@@ -21,6 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+//        [self.tabBar setHidden:YES];
     }
     return self;
 }
@@ -30,6 +31,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self _initViewControllers];
+    
+    //[self.tabBar setHidden:YES];
+//    self.tabBarController.hidesBottomBarWhenPushed=YES;
+    //[[self navigationController] pushViewController:self.tabBarController animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,10 +67,9 @@
         tabViewController.navigationItem.title =[tabDictionary objectForKey:@"viewTitle"];
         tabViewController.tableContents =[tabDictionary objectForKey:@"topics"];
         tabViewController.tableCellDescription = [tabDictionary objectForKey:@"descriptions"];
-        tabViewController.tabBarItem.image=[UIImage imageNamed:tabViewController.title];
+        tabViewController.tabBarItem.image=[UIImage imageNamed:[tabDictionary objectForKey:@"logo"]];
         [viewControllers addObject:tabViewController];
 
-        
     }
 
     
@@ -80,8 +84,10 @@
         [navViewControllers addObject:navViewController];
     }
     
+    
+    
     self.viewControllers = navViewControllers;
-
+    
     
     
 }

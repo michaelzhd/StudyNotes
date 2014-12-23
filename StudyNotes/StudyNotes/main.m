@@ -1,9 +1,9 @@
 //
 //  main.m
-//  Python StudyNotes
+//  DataStructuresAndAlgorithmsInC
 //
-//  Created by Michael Dong on 12/27/13.
-//  Copyright (c) 2013 Michael Dong. All rights reserved.
+//  Created by Michael Dong on 8/11/14.
+//  Copyright (c) 2014 Michael Dong. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

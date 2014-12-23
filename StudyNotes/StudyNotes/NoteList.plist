@@ -5,144 +5,68 @@
 	<key>tab1</key>
 	<dict>
 		<key>name</key>
-		<string>Basics</string>
+		<string>C language</string>
 		<key>viewTitle</key>
-		<string>Python Language Basics</string>
+		<string>Data Structures, Algorithms in C</string>
+		<key>logo</key>
+		<string>CLanguage</string>
 		<key>topics</key>
 		<array>
-			<string>Get Started</string>
-			<string>Environment Setup</string>
-			<string>Basic Data Types</string>
-			<string>sequence</string>
-			<string>string</string>
-			<string>list</string>
-			<string>dictionary</string>
-			<string>set</string>
-			<string>looping</string>
-			<string>heap</string>
-			<string>deque</string>
-			<string>files</string>
-			<string>formatting</string>
-			<string>Functional Programming Tools</string>
-			<string>exception</string>
-			<string>modules and packages</string>
-			<string>pip</string>
-			<string>virtualenv</string>
+			<string>General</string>
+			<string>List</string>
+			<string>Stack</string>
+			<string>Queue</string>
+			<string>String</string>
+			<string>Tree</string>
+			<string>Graph</string>
+			<string>Search</string>
+			<string>Sort</string>
 		</array>
 		<key>descriptions</key>
 		<array>
-			<string>Why study Python</string>
-			<string>Mac OS X, Linux, Windows</string>
-			<string>seq</string>
-			<string>string</string>
-			<string>list specific operations</string>
-			<string>dictionary operations</string>
-			<string>set operations</string>
-			<string>tips for looping</string>
-			<string></string>
-			<string></string>
-			<string>operations on files</string>
-			<string>formatting</string>
-			<string>filter(), reduce() and map()</string>
-			<string>Put errors under control</string>
-			<string></string>
-			<string></string>
-			<string></string>
-			<string></string>
+			<string>logical structure, physical structure</string>
+			<string>sequential list, linked list, Josephus problem</string>
+			<string>array stack,linked stack, stack applications</string>
+			<string>array queue, linked queue,circular queue, queue applications</string>
+			<string>string operations, Brute Force, KMP algorithm</string>
+			<string>binary tree storage and operations, traversing, threaded binary tree</string>
+			<string>graph storage, Depth_First_Search, Breadth_First_Search</string>
+			<string>{sequential,binary,interpolation,fibonacci...} search</string>
+			<string>{bubble,selection,shell,heap,merging,quick...} sort</string>
 		</array>
 	</dict>
 	<key>tab2</key>
 	<dict>
 		<key>name</key>
-		<string>Libraries</string>
+		<string>Data Structures &amp; Algorithms</string>
+		<key>logo</key>
+		<string>DataStructures</string>
 		<key>viewTitle</key>
-		<string>Standard Libraries</string>
+		<string>Data Structures, Algorithms in C</string>
 		<key>topics</key>
 		<array>
-			<string>sys</string>
-			<string>os</string>
-			<string>fileinput</string>
-			<string>time &amp; datetime</string>
-			<string>random</string>
-			<string>shelve</string>
-			<string>re</string>
-			<string>csv</string>
-			<string>timeit, profile</string>
-			<string>logging</string>
-			<string>getopt, optparse</string>
-			<string>difflib</string>
-			<string>socket</string>
+			<string>General</string>
+			<string>List</string>
+			<string>Stack</string>
+			<string>Queue</string>
+			<string>String</string>
+			<string>Tree</string>
+			<string>Graph</string>
+			<string>Search</string>
+			<string>Sort</string>
 		</array>
 		<key>descriptions</key>
 		<array>
-			<string>sys</string>
-			<string>os</string>
-			<string>fileinput</string>
-			<string></string>
-			<string></string>
-			<string></string>
-			<string>regular expression</string>
-			<string>csv</string>
-			<string></string>
-			<string></string>
-			<string>Dealling with parameters</string>
-			<string></string>
-			<string>A simple socket library</string>
+			<string>logical structure, physical structure</string>
+			<string>sequential list, linked list, Josephus problem</string>
+			<string>array stack,linked stack, stack applications</string>
+			<string>array queue, linked queue,circular queue, queue applications</string>
+			<string>string operations, Brute Force, KMP algorithm</string>
+			<string>binary tree storage and operations, traversing, threaded binary tree</string>
+			<string>graph storage, Depth_First_Search, Breadth_First_Search</string>
+			<string>{sequential,binary,interpolation,fibonacci...} search</string>
+			<string>{bubble,selection,shell,heap,merging,quick...} sort</string>
 		</array>
-	</dict>
-	<key>tab3</key>
-	<dict>
-		<key>name</key>
-		<string>Advanced</string>
-		<key>viewTitle</key>
-		<string>Getting Further</string>
-		<key>topics</key>
-		<array>
-			<string>urllib, urllib2</string>
-			<string>PIL</string>
-			<string>PyGame</string>
-			<string>multithreading</string>
-			<string>SocketServer</string>
-			<string>Database</string>
-			<string>GUI</string>
-			<string>Django</string>
-			<string>web spider</string>
-			<string>system administration</string>
-			<string>matplotlib</string>
-			<string>ipython</string>
-		</array>
-		<key>descriptions</key>
-		<array/>
-	</dict>
-	<key>tab4</key>
-	<dict>
-		<key>name</key>
-		<string>Quiz</string>
-		<key>viewTitle</key>
-		<string>Quiz</string>
-		<key>topics</key>
-		<array>
-			<string>Quiz 1</string>
-			<string>Quiz 2</string>
-		</array>
-		<key>descriptions</key>
-		<array/>
-	</dict>
-	<key>tab5</key>
-	<dict>
-		<key>name</key>
-		<string>More</string>
-		<key>viewTitle</key>
-		<string>More</string>
-		<key>topics</key>
-		<array>
-			<string>IDE</string>
-			<string>PEP</string>
-			<string>Google style standard</string>
-			<string>versions</string>
-		</array>
-		<key>descriptions</key>
-		<array/>
 	</dict>
 </dict>
 </plist>

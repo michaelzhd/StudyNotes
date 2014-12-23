@@ -1,6 +1,6 @@
 //
 //  BaseWebViewController.m
-//  Python StudyNotes
+//  Data Structures And Algorithms In C
 //
 //  Created by Michael Dong on 12/27/13.
 //  Copyright (c) 2013 Michael Dong. All rights reserved.
@@ -15,6 +15,7 @@
 -(void)_adjustWebviewFontSizeWithRatio:(id)sendor;
 -(void)_initNavBarTabBarControl;
 -(void)_showOrHideBars;
+-(void)_removeBodyMargin;
 
 @end
 
@@ -43,7 +44,7 @@
     
     [self _initNavBarTabBarControl];
    
-
+    [self _removeBodyMargin];
 }
 
 - (void)didReceiveMemoryWarning
@@ -148,7 +149,7 @@
 {
     UITapGestureRecognizer  *tapGesture =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_showOrHideBars)];
     
-    tapGesture.numberOfTapsRequired = 1;
+    tapGesture.numberOfTapsRequired = 2;
     [tapGesture setDelegate:self];
     
     [self.view addGestureRecognizer:tapGesture];
@@ -188,4 +189,14 @@
     
 }
 
+- (void)_removeBodyMargin
+{
+    NSString *padding = @"document.body.style.margin='0';document.body.style.padding='0'";
+    [self.webView stringByEvaluatingJavaScriptFromString:padding];
+    
+}
+
+
+
 @end
+

@@ -1,6 +1,6 @@
 //
 //  BaseViewController.m
-//  Python StudyNotes
+//  Data Structures And Algorithms In C
 //
 //  Created by Michael Dong on 12/27/13.
 //  Copyright (c) 2013 Michael Dong. All rights reserved.
@@ -69,7 +69,7 @@
 
 - (void)setAboutButton
 {
-     self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"About"] style:(UIBarStyleBlackOpaque) target:self action:@selector(showAboutView)];
+     self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"About"] style:(UIBarButtonItemStylePlain) target:self action:@selector(showAboutView)];
 }
 
 
@@ -105,8 +105,23 @@
 {
 
 
+//    return [self.tableContents count];
+    return 1;
+    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
+    
     return [self.tableContents count];
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -123,10 +138,13 @@
     //customizing TableViewCell
     cell.accessoryType   = UITableViewCellAccessoryDisclosureIndicator;
     
-    cell.textLabel.text  = [self.tableContents objectAtIndex:indexPath.row];
-    if ([self.tableCellDescription count] > indexPath.row)
+    
+    cell.textLabel.text  = [self.tableContents objectAtIndex:indexPath.section];
+    if ([self.tableCellDescription count] > indexPath.section)
     {
-        cell.detailTextLabel.text = [self.tableCellDescription objectAtIndex:indexPath.row];
+        cell.detailTextLabel.text = [self.tableCellDescription objectAtIndex:indexPath.section];
+        cell.imageView.image = [UIImage imageNamed:cell.textLabel.text];
+//        cell.imageView.frame = CGRectOffset(cell.frame, 10, 10);
     }else
     {
         cell.detailTextLabel.text =cell.textLabel.text;
@@ -136,7 +154,7 @@
     
 
     
-    if(indexPath.row >= [self.tableContents count])
+    if(indexPath.section >= [self.tableContents count])
     {
         cell.hidden =YES;
     }
@@ -148,9 +166,10 @@
 
 #pragma mark -UITableViewDelegate
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *tableCellTitle =[self.tableContents objectAtIndex:indexPath.row];
+    NSString *tableCellTitle =[self.tableContents objectAtIndex:indexPath.section];
     
     //removing non-alphanumeric characters
     NSCharacterSet *charToRemove =[[NSCharacterSet alphanumericCharacterSet] invertedSet];
@@ -159,12 +178,15 @@
     BaseWebViewController *cellWebView =[[BaseWebViewController alloc] init];
     
     cellWebView.navigationItem.title =tableCellTitle;
-    cellWebView.tabDirectory =self.title;
+    cellWebView.tabDirectory =[[self.title componentsSeparatedByCharactersInSet:charToRemove] componentsJoinedByString:@""];
+    
     cellWebView.htmlFileName =htmlFile;
     [self.navigationController pushViewController:cellWebView animated:YES];
     
     
 }
+
+
 
 
 
